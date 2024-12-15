@@ -6,14 +6,15 @@ const client = new Client({
 });
 
 // Configuração do token
-const TOKEN = 'MTMxNTE3Mzg5NDYxMjg0ODY1MA.GVRbiM.kLewG6eOFZLAdrFbufKPDV77ss-n76ZDOeTKks';
+const TOKEN = 'MTMxNTE3Mzg5NDYxMjg0ODY1MA.GdPrgQ.mwfM6ZjSZayB0AqTedgj_tJZoctSANAeQvgtyM'
 
 // Lista de itens permitidos
 const ITENS_PERMITIDOS = [
-  { name: 'Pólvora', value: 'Pólvora' },
-  { name: 'Din. sujo', value: 'Din. sujo' },
-  { name: 'Drop inteiro', value: 'Drop inteiro' },
-  { name: 'Droga', value: 'Droga' },
+  { name: 'FARM', value: 'FARM' },
+  { name: 'PÓLVORA', value: 'PÓLVORA' },
+  { name: 'DINHEIRO SUJO', value: 'DINHEIRO SUJO' },
+  { name: 'DROGAS', value: 'DROGAS' },
+  { name: 'ITENS DROP', value: 'ITENS DROP' }, 
 ];
 
 // Memória para rastrear estoques por canal (cada item separadamente)
