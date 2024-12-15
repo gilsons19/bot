@@ -1,12 +1,24 @@
 const { Client, GatewayIntentBits, SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+require('dotenv').config();
 
-// Criação do cliente do bot
-const client = new Client({
-  intents: [GatewayIntentBits.Guilds],
+require('dotenv').config();
+
+const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
+
+if (!DISCORD_TOKEN) {
+    console.error('Erro: O token do bot não foi configurado.');
+    process.exit(1);
+}
+
+// Código do bot
+const { Client } = require('discord.js');
+const client = new Client();
+
+client.once('ready', () => {
+    console.log('Bot está online!');
 });
 
-// Configuração do token
-const TOKEN = 'MTMxNTE3Mzg5NDYxMjg0ODY1MA.GdPrgQ.mwfM6ZjSZayB0AqTedgj_tJZoctSANAeQvgtyM'
+client.login(DISCORD_TOKEN);
 
 // Lista de itens permitidos
 const ITENS_PERMITIDOS = [
